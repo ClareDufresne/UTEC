@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(0, 0, 0);
+}
+
+
+.heroContainer, .infoBlock{
+    height: calc(100vh - 60px);
+    width: 100vw;
+    display: inline-flex;
+}
+#infoBlock2, #infoBlock3, #infoBlockTech{
+    height: auto;
+}
+#infoBlock3{
+    margin-top: 30px;
+}
+.hero{
+    padding: 0 40px;
+    margin: auto;
+    width: 50vw;
+}
+.hero h1{
+    font-size: 118px;
+    color: white;
+    margin-bottom: -10px;
+    margin-top: -20px;
+}
+.hero p{
+    font-size: 22px;
+    color: white;
+}
+.intro p, .intro h1{
+    text-align: center;
+}
+
+.moreInfo{
+    padding-top: 18px;
+}
+.moreInfo p{
+    font-size: 18px;
+}
+
+.rightIMG, .leftIMG{
+    width: 50vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rightIMG img, .leftIMG img{
+    width: 48vw;
+    border: 2px solid;
+    border-image-source: radial-gradient(black 80%, white);
+    border-image-slice: 1;
+    padding: 8px;
+}
+.leftIMG img{
+    width: 38vw;
+}
+.rightIMG{
+    padding-right: 50px;
+}
+.leftIMG{
+    padding-left: 50px;
+}
+.centreIMG img{
+    height: 80vh;
+    border: 2px solid;
+    border-image-source: radial-gradient(black 80%, white);
+    border-image-slice: 1;
+    padding: 8px;
+}
+
+.imgCaption{
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+#lessSpace{
+    margin-top: 0;
+}
+
+#img3{
+    margin-top: 10px;
+}
+#img5{
+    margin-top: 30px;
+}
+#imgtech{
+    border: 0;
+}
+
+.text{
+    color: white;
+    font-size: 18px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+}
+#legacy{
+    text-align: center;
+}
+#infoBlockTech .text{
+    justify-content: start;
+    padding-top: 10px;
+}
+#infoBlockTech{
+    padding-top: 40px;
+}
+
+#comparison{
+    margin-top: 10px;
+}
+
+.text h2{
+    font-size: 28px;
+    margin: 0;
+    text-align: center;
+}
+
+
+.historyButton{
+    background-color: black;
+    padding: 22px 40px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    border: 1px solid white;
+}
+.historyButton:hover{
+    cursor: pointer;
+    box-shadow: 0 0 4px 1px white;
+}
+
+.buttonContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+
+
+a:link, a:visited{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+.header li{
+    display: inline-block;
+    padding-right: 60px;
+}
+.header ul{
+    padding-top: 12px;
+    padding-right: 20px;
+    position: absolute;
+    right: 0;
+}
+.header{
+    height: 60px;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: black;
+}
+.header a:link, .header a:visited{
+    color: white;
+}
+.header a:link:hover, .header a:visited:hover{
+    border-bottom: 1px solid white;
+}
+
+.notesBlock{
+    display: flex;
+    padding-top: 15px;
+}
+.notesText{
+    flex-direction: column;
+    margin-right: 50px;
+}
+.notesText li{
+    margin-bottom: 20px;
+}
+.notesText h3{
+    text-align: center;
+}
+.smallChart img{
+    width: 100%;
+}
+.smallChart p{
+    text-align: center;
+    margin-top: 0;
+}
+
+#HardwareList{
+    padding: 0;
+    columns: 2;
+}
+#HardwareList li{
+    margin-bottom: 10px;
+}
+
+#bibliographyContainer{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#bibliographyBlock{
+    width: 70vw;
+}
+
+#bibliography{
+    color: white;
+    text-indent: -36px; 
+    padding-left: 36px;
+    line-height: 1.5;
+}
+#bibliography a{
+    word-break: break-all;
+    color: rgb(186, 105, 226);
+}
+#bibliography p{
+    margin: 30px 0;
+}
+#bibliography h2{
+    text-align: center;
+}

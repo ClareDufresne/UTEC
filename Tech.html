@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Specs</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="History.html">History</a></li>
+            <li><a href="Tech.html">Tech Specs</a></li>
+            <li><a href="Bibliography.html">Bibliography</a></li>
+        </ul>
+    </div>
+
+    <div class="infoBlock">
+        <div class="text" id="legacy">
+            <p>
+                The following information is meant to give a brief and basic understanding of how the UTEC operated. 
+            </p>
+            <p>
+                R.F. Johnston was one of the primary developers of UTEC who's work focused on the computer's input and output mechanisms (Campbell, 2006, p. 326). 
+                Most of the figures and data are taken from the article he wrote for the 1952 ACM meeting. 
+            </p>
+            <p>
+                It is important to note, however, that the UTEC was an experimental prototype subjected to frequent changes in terms of hardware and its instruction set (Campbell, 2006, p. 327).
+                The machine was eventually dismantled and likely sold for scrap and there are not many original documents or blueprints remaining (Campbell, 2006, p. 325).
+                So while the following information is accurate to September of 1952, some specifications likely varied between the computer's construction and eventual dismantling.
+            </p>
+        </div>
+    </div>
+
+    <div class="infoBlock" id="infoBlockTech">
+        <div class="leftIMG">
+            <img id="imgtech" src="Images/Figure 9. Input - Output code and word assembly.png" alt="">
+            <p class="imgCaption">Input - Output code and word assembly (Johnston, 1952, p. 160)</p>
+            <img id="imgtech" src="Images/Figure 2.png" alt="">
+            <p class="imgCaption">All of the orders the UTEC was capable of (Johnston, 1952, 157)</p>
+            <p class="imgCaption" id="lessSpace">Note that n refers to a storage location and a0 a1 a2 ... a11 refer to the 12 bits in the accumulator register</p>
+        </div>
+        <div class="text">
+            <h2>Logic</h2>
+            <p>
+                The UTEC dealt with 12 bit* words, where each word could either represent an instruction, a decimal number or an octal number* (Johnston, 1952, p. 154).
+            </p>
+            <p>
+                Numbers were usually represented as “signed eleven binary digit fractions” (p. 154), meaning that 11 of the 12 bits contain the binary representation of a number, and the 12th bit is the sign bit, which indicates whether a number is positive or negative.
+            </p>
+            <p>
+                Instructions were represented by 4 octal digits (3 bits each), the first of which specified the order while the rest specified which address the operation was to be performed on (pp. 154-155). 
+            </p>
+            <div class="notesBlock">
+                <div class="notesText">
+                    <h3>Notes:</h3>
+                    <ul>
+                        <li>
+                            A bit can be either 1 or 0. It is the most basic unit in computing, communicated via an electrical switch that can be either on (1) or off (0).
+                        </li>
+                        <li>
+                            The decimal number system, base 10, contains the digits 0-9 and is the system we are most familiar with. Octal numbers are numbers in base 8, meaning that they can contain the digits 0-7. Binary numbers are those in base 2, meaning that digits can only be 0 or 1.
+                        </li>
+                    </ul>
+                </div>
+                <div class="smallChart">
+                    <img src="Images/DecimalBinaryOctal.png">
+                    <p class="imgCaption">Conversion chart between decimal, binary and octal number systems</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="infoBlock">
+        <div class="leftIMG">
+            <img id="imgtech" src="Images/Figure 2. Serial vs. parallel transmission of the number 10011.png" alt="">
+            <p class="imgCaption">Serial vs. parallel transmission of the number 10011 (19 in decimal format) (Stachniak & Campbell, 2009, p. 12)</p>
+        </div>
+        <div class="text">
+            <h2>Parallel Architecture</h2>
+            <p>
+                The parallel or serial design of a computer refers to the circuitry within, which transfers binary data through pulses of electricity.
+            </p>
+            <p>
+                In terms of speed, parallel architectures can be vastly superior to serial ones. Consider a word of length n. In a serial machine, this data is transferred one bit at a time. In a parallel machine, n bits of data are transferred at the same time, making this model up to n times faster. However, the circuitry in a parallel computer needs to be synchronized, which makes it more complicated to build (Stachniak & Campbell, 2009, p. 12). 
+            </p>
+        </div>
+    </div>
+
+    <div class="infoBlock" id="infoBlockTech">
+        <div class="text">
+            <h2>Hardware and Operation</h2>
+            <p>
+                “The computer was approximately six feet high, eight feet wide and one foot deep” (Stachniak & Campbell, 2009, p. 14).
+            </p>
+            <div class="centreIMG">
+                <img id="imgtech" src="Images/Figure 3. The block diagram.png" alt="">
+                <p class="imgCaption" id="lessSpace">
+                    The block diagram (Johnston, 1952, 157)
+                </p>
+            </div>
+            <ul id="HardwareList">
+                <li>
+                    <b>Electrostatic Store:</b> 12 Williams tubes were used to store 512 words (Johnston, 1952, pp. 154-155).
+                </li>
+                <li>
+                    <b>Storage Register (S.R.):</b> 12-bit register which handles input and output and words being read from and written to the electrostatic store (p. 154).
+                </li>
+                <li>
+                    <b>Location Register (L.R.):</b> 9-bit register indicating the address of the storage location to be consulted during the action phase (p. 154).
+                </li>
+                <li>
+                    <b>Regeneration Counter (R.C.):</b> 9-bit counter indicating the address of the storage location to be regenerated during the regeneration phase (p. 154).
+                </li>
+                <li>
+                    <b>Accumulator (Ac.):</b> 12-bit register holding the second number to be added or subtracted from the value in S.R. (p. 154).
+                </li>
+                <li>
+                    <b>Control Counter (C.C.):</b> 9-bit counter indicating the address of the storage location holding the next instruction (p. 154).
+                </li>
+                <li>
+                    <b>Control Register (C.R.):</b> 12-bit register holding the current instruction (p. 154).
+                </li>
+                <li>
+                    <b>Decoder Matrix:</b> a demultiplexer which translates 3 binary digits to the equivalent 8 digit octal number. Used on the 3 order digits of the instruction stored in C.R. (p. 154).
+                </li>
+                <li>
+                    <b>Adder:</b> arithmetic unit which performed addition and subtraction (which is just adding the complement* of a negative number) (p. 154).
+                </li>
+                <li>
+                    <b>Gates:</b> the only gate described by Johnston is the master-slave flip-flop consisting of the sum output from the adder and the accumulator (pp. 154-155).
+                </li>
+                <li>
+                    <b>ABCD Pulse Generator:</b> acts as a clock cycle for the continous looping of the four periods A, B, C, and D. However, the UTEC also offered a switch to slow down the cycle or a pushbutton to manually trigger each period (p. 154).
+                </li>
+                <li>
+                    During <b>period A</b>, C.C. sets L.R. with the storage location to be referenced (p. 157). During <b>period B</b>, the instruction from the referenced location is loaded into S.R. and then C.R. (p. 157). The counters, R.C. and C.C. are both incremented by one (p. 157). During <b>period C</b>, the instruction in C.R. is split up with the 9-bit address portion going to L.R. and the 3-bit order portion being decoded by the decoder matrix which will trigger the gate setup necessary to carry out the given order (p. 157). This order would be carried out during <b>period D</b> and extend into the next period A if necessary (p. 157). R.C. is again incremented by one (p. 157).
+                </li>
+            </ul>
+
+            <div class="notesBlock">
+                <div class="notesText">
+                    <h3>Note:</h3>
+                    <ul>
+                        <li>
+                            The complement of a negative binary number is calculated by inversion. Simply swap all the 0s with 1s and all the 1s with 0s. 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
